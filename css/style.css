@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* 赤い色の箱を作っているCSS */
+.red--box {
+  width: 500px;
+  height: 500px;
+  background: #ff0000;
+  display: inline-block;
+  text-align: center
+}
+
+/* 画面幅が最大1100pxの時に下記のメディアクエリが読み込まれる */
+@media screen and (max-width: 1100px) {
+  .red--box {
+    width: 400px;
+    height: 400px;
+    background: #ff0000;
+    display: inline-block;
+  }
+}
+
+/* 画面幅が最小値768pxから最大値1000pxの時に下記のメディアクエリが読み込まれる */
+@media screen and (min-width:768px) and (max-width:1000px) {
+  .red--box {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* 画面幅が最大値767px以下の時に下記のメディアクエリが読み込まれる */
+@media screen and (max-width: 767px) {
+  .red--box {
+    width: 250px;
+    height: 250px;
+  }
+}
