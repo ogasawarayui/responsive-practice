@@ -46,8 +46,16 @@ body {
 /* margin値の変更 */
 @media screen and (min-width:959px) {
   .box3 {
-    margin: 150px and 50px background-color #22ff00
+    margin-top: 150px;
+    margin-bottom: 50px;
+    background-color: #22ff00
   }
+}
+
+/* Q4 */
+.box2,
+.box3 {
+  float: left;
 }
 
 /* floatの解除 */
@@ -55,68 +63,94 @@ body {
 
   .box2,
   .box3 {
-    clear: both;
-    /*要素の打ち消し */
+    float: none;
   }
 }
 
 /* Q5 */
-.box4 {
-  margin: 0 auto;
-  width: 300px;
-  height: 300px;
+.flex_test-box {
+  display: flex;
+  flex-direction: row;
+  background-color: #eee;
+  /* 背景色指定 */
+  padding: 10px;
+  /* 余白指定 */
+}
+
+.flex_test-item {
+  padding: 10px;
+  color: black;
+  /* 文字色 */
+  margin: 10px;
+  /* 外側の余白 */
+  border-radius: 5px;
+  /* 角丸指定 */
+}
+
+.flex_test-item:nth-child(A) {
   background-color: #ff0000;
+  /* 背景色指定 */
 }
 
-.box5 {
-  margin: 0 auto;
-  width: 300px;
-  height: 300px;
+.flex_test-item:nth-child(B) {
   background-color: #0008ff;
+  /* 背景色指定 */
 }
 
-.box6 {
-  margin: 0 auto;
-  width: 300px;
-  height: 300px;
+.flex_test-item:nth-child(C) {
   background-color: #ff8400;
+  /* 背景色指定 */
 }
 
 /* 要素の並びを逆順 */
 @media screen and (min-width:959px) {
-  .box6,
-  .box5,
-  .box4
+  .flex_test-box {
+    flex-direction: row-reverse
+  }
 }
 
 /* Q6 */
-.box9 {
-  width: 300px;
-  height: 300px;
-  background: #00ff51;
+.flex_test-box {
+  display: flex;
+  flex-direction: row;
+  background-color: #eee;
+  /* 背景色指定 */
+  padding: 10px;
+  /* 余白指定 */
 }
 
-.box10 {
-  width: 300px;
-  height: 300px;
-  background: #d4ff00;
+.flex_test-item {
+  padding: 10px;
+  color: black;
+  /* 文字色 */
+  margin: 10px;
+  /* 外側の余白 */
+  border-radius: 5px;
+  /* 角丸指定 */
 }
 
-.box11 {
-  width: 300px;
-  height: 300px;
-  background: #ff00e1;
+.flex_test-item:nth-child(A) {
+  background-color: #00ff51;
+  /* 背景色指定 */
+}
+
+.flex_test-item:nth-child(B) {
+  background-color: #d4ff00;
+  /* 背景色指定 */
+}
+
+.flex_test-item:nth-child(C) {
+  background-color: #ff00e1;
+  /* 背景色指定 */
 }
 
 /* 要素の並びを入れ替え */
 @media screen and (min-width:959px) {
-  .box11,
-  .box9,
-  .box10
+  .flex_test-item:nth-child(C).flex_test-item:nth-child(A).flex_test-item:nth-child(B)
 }
 
 /* Q7 */
-.box12 {
+.box4 {
   width: 300px;
   height: 300px;
   background: #00ff51;
@@ -124,8 +158,12 @@ body {
 
 /* ⻘い箱をブレイクポイント以上では非表示 */
 @media screen and (max-width:960px) {
-  .box3
+  .box3 {
+    display: none
+  }
 }
 
 /* ⻘い箱をブレイクポイント未満で表示 */
-@media screen and (min-width:959px) {}
+@media screen and (min-width:959px) {
+  .box3
+}
