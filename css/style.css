@@ -1,202 +1,131 @@
 @charset "UTF-8";
 
-/* 赤い色の箱を作っているCSS */
+body {
+  width: 1100px;
+}
+
+/* Q1 */
 .box {
-  width: 500px;
-  height: 500px;
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
   background: #ff0000;
-  display: inline-block;
-  text-align: center
 }
 
-/* 画面幅が最大1100pxの時に下記のメディアクエリが読み込まれる */
-@media screen and (max-width: 1100px) {
+/* 箱のサイズの変更 */
+@media screen and (max-width: 959px) {
   .box {
-    width: 400px;
-    height: 400px;
-    background: #ff0000;
-    display: inline-block;
+    width: 200px;
+    height: 200px;
   }
 }
 
-/* 画面幅が最小値768pxから最大値1000pxの時に下記のメディアクエリが読み込まれる */
-@media screen and (min-width:768px) and (max-width:1000px) {
-  .box {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-/* 画面幅が最大値767px以下の時に下記のメディアクエリが読み込まれる */
-@media screen and (max-width: 767px) {
-  .box {
-    width: 250px;
-    height: 250px;
-  }
-}
-
-/* 赤い色の箱を作っているCSS */
+/* Q2 */
 .box2 {
+  margin: 0 auto;
   width: 300px;
   height: 300px;
   background: #ff0000;
-  display: inline-block;
-  text-align: center
 }
 
-/* ブレイクポイントで箱の背景色の変更 */
-@media screen and (max-width: 1100px) {
+/* 色の変更 */
+@media screen and (min-width:959px) {
   .box2 {
-    width: 300px;
-    height: 300px;
-    background: #007bff;
-    display: inline-block;
+    background-color: #007bff;
   }
 }
 
-/* 赤い色の箱を作っているCSS */
+/* Q3 */
 .box3 {
-  width: 500px;
-  height: 500px;
-  background: #0008ff;
-  display: inline-block;
-  text-align: center
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: #0008ff;
 }
 
-/* ブレイクポイントでmargin値の変更 */
-@media screen and (margin:150px) and (margin:50px) {
+/* margin値の変更 */
+@media screen and (min-width:959px) {
   .box3 {
-    background: #2f0;
-    display: inline-block;
+    margin: 150px and 50px background-color #22ff00
   }
 }
 
-/* 赤い色の箱を作っているCSS */
+/* floatの解除 */
+@media screen and (max-width: 959px) {
+
+  .box2,
+  .box3 {
+    clear: both;
+    /*要素の打ち消し */
+  }
+}
+
+/* Q5 */
 .box4 {
-  width: 500px;
-  height: 500px;
-  background: #ff0000;
-  display: inline-block;
-  text-align: center float;
-  right:
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: #ff0000;
 }
 
 .box5 {
-  width: 500px;
-  height: 500px;
-  background: #0008ff;
-  display: inline-block;
-  text-align: center float;
-  right:
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: #0008ff;
 }
 
-/*  ブレイクポイントでfloatの解除 */
-@media screen and (margin:150px) and (margin:50px) {
-
-  .box4,
-  .box5 {
-    clear: both;
-    /*要素の打ち消し */
-  }
-}
-
-/* 赤い色の箱を作っているCSS */
 .box6 {
-  width: 500px;
-  height: 500px;
-  background: #ff0000;
-  display: inline-block;
-  text-align: center float;
-  right:
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: #ff8400;
 }
 
-.box7 {
-  width: 500px;
-  height: 500px;
-  background: #0008ff;
-  display: inline-block;
-  text-align: center float;
-  right:
-}
-
-.box8 {
-  width: 500px;
-  height: 500px;
-  background: #ff8400;
-  display: inline-block;
-  text-align: center float;
-  right:
-}
-
-/* ブレイクポイントで要素の並びを逆順 */
-@media screen and (margin:150px) and (margin:50px) {
+/* 要素の並びを逆順 */
+@media screen and (min-width:959px) {
   .box6,
-  .box7,
-  .box8 float: left;
+  .box5,
+  .box4
 }
 
-/* 赤い色の箱を作っているCSS */
+/* Q6 */
 .box9 {
-  width: 500px;
-  height: 500px;
-  background: #ff0000;
-  display: inline-block;
-  text-align: center float;
-  right:
+  width: 300px;
+  height: 300px;
+  background: #00ff51;
 }
 
 .box10 {
-  width: 500px;
-  height: 500px;
-  background: #0008ff;
-  display: inline-block;
-  text-align: center float;
-  right:
+  width: 300px;
+  height: 300px;
+  background: #d4ff00;
 }
 
-/*  ブレイクポイントでfloatの解除 */
-@media screen and (margin:150px) and (margin:50px) {
-
-  .box9,
-  .box10 {
-    clear: both;
-    /*要素の打ち消し */
-  }
-}
-
-/* 赤い色の箱を作っているCSS */
 .box11 {
-  width: 500px;
-  height: 500px;
-  background: #ff0000;
-  display: inline-block;
-  text-align: center float;
-  right:
+  width: 300px;
+  height: 300px;
+  background: #ff00e1;
 }
 
+/* 要素の並びを入れ替え */
+@media screen and (min-width:959px) {
+  .box11,
+  .box9,
+  .box10
+}
+
+/* Q7 */
 .box12 {
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   background: #00ff51;
-  display: inline-block;
-  text-align: center float;
-  right:
 }
 
-.box13 {
-  width: 500px;
-  height: 500px;
-  background: #0008ff;
-  display: inline-block;
-  text-align: center float;
-  right:
+/* ⻘い箱をブレイクポイント以上では非表示 */
+@media screen and (max-width:960px) {
+  .box3
 }
 
-/* ⻘い箱をブレイクポイント以上では非表示、ブレイクポイント未満で表示 */
-@media screen and (margin:150px) and (margin:50px) {
-    {
-    "files.exclude": {
-      ".box11": false
-    }
-  }
-}
+/* ⻘い箱をブレイクポイント未満で表示 */
+@media screen and (min-width:959px) {}
