@@ -9,6 +9,7 @@ body {
   height: 300px;
   text-align: center;
   line-height: 300px;
+  color: black;
 }
 
 /* Q1 */
@@ -19,14 +20,6 @@ body {
   background: #ff0000;
 }
 
-/* 箱のサイズの変更 */
-@media screen and (max-width: 959px) {
-  .box1 {
-    width: 200px;
-    height: 200px;
-  }
-}
-
 /* Q2 */
 .box2 {
   margin: 0 auto;
@@ -35,165 +28,149 @@ body {
   background: #ff0000;
 }
 
-/* 色の変更 */
-@media screen and (min-width:959px) {
-  .box2 {
-    background-color: #007bff;
-  }
-}
-
 /* Q3 */
 .box3 {
-  margin: 0 auto;
-  width: 300px;
-  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.box3-1 {
   background-color: #0008ff;
 }
 
-/* margin値の変更 */
-@media screen and (min-width:959px) {
-  .box3 {
-    margin-top: 150px;
-    margin-bottom: 50px;
-    background-color: #22ff00
-  }
+.box3-2 {
+  background-color: #22ff00;
+  margin-left: 150px;
 }
 
 /* Q4 */
-.box4-1 {
+
+.box4 {
   margin: 0 auto;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.box4-1 {
   width: 300px;
   height: 300px;
   background: #ff0000;
+  float: left;
 }
 
 .box4-2 {
-  margin: 0 auto;
   width: 300px;
   height: 300px;
   background-color: #0008ff;
   float: left;
 }
 
-/* floatの解除 */
-@media screen and (max-width: 959px) {
-  .box4-2 {
-    float: none;
-  }
-}
-
 /* Q5 */
-.flex_test-box {
+.flex_test-box1 {
   display: flex;
-  flex-direction: row;
-  background-color: #eee;
-  /* 背景色指定 */
-  padding: 10px;
-  /* 余白指定 */
+  justify-content: center;
 }
 
-.flex_test-item {
-  padding: 10px;
-  color: black;
-  /* 文字色 */
-  margin: 10px;
-  /* 外側の余白 */
-  border-radius: 5px;
-  /* 角丸指定 */
-}
-
-.flex_test-box:first-child {
+.box5-1 {
   background-color: #ff0000;
-  /* 背景色指定 */
 }
 
-.flex_test-box:nth-child(2) {
+.box5-2 {
   background-color: #0008ff;
-  /* 背景色指定 */
 }
 
-.flex_test-box:nth-child(3) {
+.box5-3 {
   background-color: #ff8400;
-  /* 背景色指定 */
-}
-
-/* 要素の並びを逆順 */
-@media screen and (min-width:959px) {
-  .flex_test-box {
-    flex-direction: row-reverse
-  }
 }
 
 /* Q6 */
-.flex_test-box {
+.flex_test-box2 {
+  justify-content: center;
   display: flex;
-  flex-direction: row;
-  background-color: #eee;
-  /* 背景色指定 */
-  padding: 10px;
-  /* 余白指定 */
 }
 
-.flex_test-item {
-  padding: 10px;
-  color: black;
-  /* 文字色 */
-  margin: 10px;
-  /* 外側の余白 */
-  border-radius: 5px;
-  /* 角丸指定 */
-}
-
-.flex_test-item:nth-child(A) {
+.box6-1 {
   background-color: #00ff51;
-  /* 背景色指定 */
 }
 
-.flex_test-item:nth-child(B) {
+.box6-2 {
   background-color: #d4ff00;
-  /* 背景色指定 */
 }
 
-.flex_test-item:nth-child(C) {
+.box6-3 {
   background-color: #ff00e1;
-  /* 背景色指定 */
-}
-
-/* 要素の並びを入れ替え */
-@media screen and (min-width:959px) {
-  .flex_test-item:nth-child(C).flex_test-item:nth-child(A).flex_test-item:nth-child(B)
 }
 
 /* Q7 */
 
+.box7 {
+  display: flex;
+  justify-content: center;
+}
+
 .box7-1 {
-  margin: 0 auto;
-  width: 300px;
-  height: 300px;
   background: #ff0000;
 }
 
 .box7-2 {
-  width: 300px;
-  height: 300px;
-  background: #00ff51;
+  background-color: #0008ff;
+  display: none;
 }
 
 .box7-3 {
-  margin: 0 auto;
-  width: 300px;
-  height: 300px;
-  background-color: #0008ff;
+  background: #00ff51;
 }
 
-/* ⻘い箱をブレイクポイント以上では非表示 */
-@media screen and (max-width:960px) {
-  .box7-3 {
+@media screen and (max-width: 959px) {
+
+  /* Q1 箱のサイズの変更 */
+  .box1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Q2 色の変更 */
+  .box2 {
+    background-color: #007bff;
+  }
+
+  /* Q3 margin値の変更 */
+  .box3-2 {
+    margin-left: 50px;
+  }
+
+  /* Q4 floatの解除 */
+  .box4-1,
+  .box4-2 {
+    float: none;
+  }
+
+  /* Q5 要素の並びを逆順 */
+  .flex_test-box1 {
+    flex-direction: row-reverse;
+  }
+
+  /* Q6 要素の並びを入れ替え */
+  .box6-1 {
+    order: 2;
+  }
+
+  .box6-2 {
+    order: 3;
+  }
+
+  .box6-3 {
+    order: 1;
+  }
+
+  /* Q7-1赤い箱をブレイクポイント未満で非表示 */
+  .box7-1 {
     display: none;
   }
-}
 
-/* ⻘い箱をブレイクポイント未満で表示 */
-@media screen and (min-width:959px) {
-  .box7-3
+  /* Q7-2⻘い箱をブレイクポイント未満で表示 */
+  .box7-2 {
+    display: block;
+  }
+
 }
