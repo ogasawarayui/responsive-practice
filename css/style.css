@@ -4,8 +4,15 @@ body {
   width: 1100px;
 }
 
+.commom {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+}
+
 /* Q1 */
-.box {
+.box1 {
   margin: 0 auto;
   width: 400px;
   height: 400px;
@@ -14,7 +21,7 @@ body {
 
 /* 箱のサイズの変更 */
 @media screen and (max-width: 959px) {
-  .box {
+  .box1 {
     width: 200px;
     height: 200px;
   }
@@ -53,16 +60,24 @@ body {
 }
 
 /* Q4 */
-.box2,
-.box3 {
+.box4-1 {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+
+.box4-2 {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: #0008ff;
   float: left;
 }
 
 /* floatの解除 */
 @media screen and (max-width: 959px) {
-
-  .box2,
-  .box3 {
+  .box4-2 {
     float: none;
   }
 }
@@ -87,17 +102,17 @@ body {
   /* 角丸指定 */
 }
 
-.flex_test-item:nth-child(A) {
+.flex_test-box:first-child {
   background-color: #ff0000;
   /* 背景色指定 */
 }
 
-.flex_test-item:nth-child(B) {
+.flex_test-box:nth-child(2) {
   background-color: #0008ff;
   /* 背景色指定 */
 }
 
-.flex_test-item:nth-child(C) {
+.flex_test-box:nth-child(3) {
   background-color: #ff8400;
   /* 背景色指定 */
 }
@@ -150,20 +165,35 @@ body {
 }
 
 /* Q7 */
-.box4 {
+
+.box7-1 {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+}
+
+.box7-2 {
   width: 300px;
   height: 300px;
   background: #00ff51;
 }
 
+.box7-3 {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: #0008ff;
+}
+
 /* ⻘い箱をブレイクポイント以上では非表示 */
 @media screen and (max-width:960px) {
-  .box3 {
-    display: none
+  .box7-3 {
+    display: none;
   }
 }
 
 /* ⻘い箱をブレイクポイント未満で表示 */
 @media screen and (min-width:959px) {
-  .box3
+  .box7-3
 }
